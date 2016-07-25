@@ -1,0 +1,83 @@
+﻿[Info] @15:43:07_1548 #10 - AdhesiveFramework开始启动...版本号：2012-06-01-08
+[Info] @15:43:11_8686 #10 - 开始初始化配置服务
+[Error] @15:43:16_6332 #10 - 初始化配置服务失败，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.1183997. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+   at Adhesive.Config.Imp.ConfigService.RegisterApplication(String appName) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 793
+   at Adhesive.Config.Imp.ConfigService.Init() in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 42
+   at Adhesive.Config.Imp.InitServiceTask.Execute() in d:\src\demo1\Adhesive\Adhesive.Config.Imp\InitServiceTask.cs:line 28
+[Info] @15:43:16_6342 #10 - 开始初始化持久化服务
+[Error] @15:43:18_5822 #10 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.1356639. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Warning] @15:43:20_2888 #10 - System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AlarmItem' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at Adhesive.Persistence.Imp.InitServiceTask.<Execute>b__1(Type e) in d:\src\demo1\Adhesive\Adhesive.Persistence.Imp\InitServiceTask.cs:line 32
+ClientConnectionId:d09d061e-f431-4537-99c0-d058c61d7da8
+Error Number:2714,State:6,Class:16
+[Info] @15:43:20_2908 #10 - 初始化持久化服务完成
+[Info] @15:43:20_2918 #10 - AdhesiveFramework启动完成！...版本号：2012-06-01-08

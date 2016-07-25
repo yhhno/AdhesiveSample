@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.MemoryQueue</name>
+    </assembly>
+    <members>
+        <member name="M:Adhesive.MemoryQueue.IMemoryQueueService.Init(Adhesive.MemoryQueue.MemoryQueueServiceConfiguration)">
+            <summary>
+            初始化队列服务
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Adhesive.MemoryQueue.IMemoryQueueService.Enqueue``1(``0)">
+            <summary>
+            入列一条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+        </member>
+        <member name="M:Adhesive.MemoryQueue.IMemoryQueueService.EnqueueBatch``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            入列多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+        </member>
+        <member name="M:Adhesive.MemoryQueue.IMemoryQueueService.GetState">
+            <summary>
+            获取队列状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.MemoryQueueName">
+            <summary>
+            内存队列名
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeAction">
+            <summary>
+            消费数据的委托
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.MaxItemCount">
+            <summary>
+            队列最大项数
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeIntervalMilliseconds">
+            <summary>
+            消费数据的时间间隔毫秒
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeIntervalWhenErrorMilliseconds">
+            <summary>
+            遇到错误时消费数据的时间间隔毫秒
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ReachMaxItemCountAction">
+            <summary>
+            达到最大项数后的策略
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.NotReachBatchCountConsumeAction">
+            <summary>
+            消费数据时不足批次数的策略
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeErrorAction">
+            <summary>
+            消费数据遇到错误的策略
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeThreadCount">
+            <summary>
+            消费的线程总数
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceConfiguration.ConsumeItemCountInOneBatch">
+            <summary>
+            消费数据的批量项数
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.Abandon">
+            <summary>
+            抛弃数据
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.AbandonAndLogException">
+            <summary>
+            抛弃数据并且记录异常
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.EnqueueForever">
+            <summary>
+            永远重新入列
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.EnqueueForeverAndLogException">
+            <summary>
+            永远重新入列并且记录异常
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.EnqueueTwice">
+            <summary>
+            重新入列两次
+            </summary>
+        </member>
+        <member name="F:Adhesive.MemoryQueue.MemoryQueueServiceConsumeErrorAction.EnqueueTwiceAndLogException">
+            <summary>
+            重新入列两次并且记录异常
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.MemoryQueueName">
+            <summary>
+            内存队列名
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.Configuration">
+            <summary>
+            内存队列的配置
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.TotalConsumeItemCount">
+            <summary>
+            总消费的项数量
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.TotalConsumeErrorItemCount">
+            <summary>
+            总消费出错的项数量
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.CurrentItemCount">
+            <summary>
+            当前队列剩余项数
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.CurrentErrorRetryItemCount">
+            <summary>
+            当前错误重试的项数
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.LastConsumeErrorOccurTime">
+            <summary>
+            上次消费出错的时间
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.LastReachMaxItemCountOccurTime">
+            <summary>
+            上次达到最大项数的时间
+            </summary>
+        </member>
+        <member name="P:Adhesive.MemoryQueue.MemoryQueueServiceState.LastConsumeErrorMessage">
+            <summary>
+            上次消费出错的异常信息
+            </summary>
+        </member>
+    </members>
+</doc>

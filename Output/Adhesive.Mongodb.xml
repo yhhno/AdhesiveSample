@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.Mongodb</name>
+    </assembly>
+    <members>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetCategoryData">
+            <summary>
+            获取类别数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetAdminConfiguration(System.String,System.String)">
+            <summary>
+            获取管理信息
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetAdminConfigurationInternal(System.String)">
+            <summary>
+            报警服务获取管理信息
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetServerInfo">
+            <summary>
+            获取服务器信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetDataCount(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取数据量
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableName"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetFilterData(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime)">
+            <summary>
+            获取过滤信息
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableName"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetTableData(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.Int32,System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取列表数据
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableName"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetTableDataByContextId(System.String)">
+            <summary>
+            根据上下文Id或者所有类型的列表数据
+            </summary>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="contextId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetDetailData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取单条记录
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="databaseName"></param>
+            <param name="tableName"></param>
+            <param name="pkcolumnName"></param>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetDetailDataOnlyById(System.String,System.String)">
+            <summary>
+            直接根据Id获取单条记录
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetStatisticsData(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.TimeSpan,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取统计数据
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableNames"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="span"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetGroupData(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取分组统计数据
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableNames"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Mongodb.IMongodbQueryService.GetStateData(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取状态数据
+            </summary>
+            <param name="databasePrefix"></param>
+            <param name="tableName"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceEntityAttribute.ExpireDays">
+            <summary>
+            过期时间（超过则删除）
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceEntityAttribute.Name">
+            <summary>
+            实体名
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceEntityAttribute.CategoryName">
+            <summary>
+            分类名
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceEntityAttribute.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbSortOption.None">
+            <summary>
+            不作排序
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbSortOption.Ascending">
+            <summary>
+            正序排序
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbSortOption.Descending">
+            <summary>
+            倒序排序
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbCascadeFilterOption.None">
+            <summary>
+            不作为级联过滤
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbCascadeFilterOption.LevelOne">
+            <summary>
+            级联过滤的第一级
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbCascadeFilterOption.LevelTwo">
+            <summary>
+            级联过滤的第二级
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbCascadeFilterOption.LevelThree">
+            <summary>
+            级联过滤的第三级
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbFilterOption.None">
+            <summary>
+            不作为过滤条件
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbFilterOption.DropDownListFilter">
+            <summary>
+            下拉框单选过滤
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbFilterOption.CheckBoxListFilter">
+            <summary>
+            复选框多选过滤
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbFilterOption.TextBoxFilter">
+            <summary>
+            文本框搜索过滤
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.Description">
+            <summary>
+            列描述
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.ShowInTableView">
+            <summary>
+            是否显示在列表视图中
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.MongodbFilterOption">
+            <summary>
+            过滤选项
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.MongodbCascadeFilterOption">
+            <summary>
+            级联过滤选项
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPresentationItemAttribute.MongodbSortOption">
+            <summary>
+            排序选项
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.MongodbIndexOption">
+            <summary>
+            索引选项
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.IsPrimaryKey">
+            <summary>
+            是否是主键列
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.IsTableName">
+            <summary>
+            列的值是否变为表名
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.IsIgnore">
+            <summary>
+            是否忽略不保存到数据库中
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.IsTimeColumn">
+            <summary>
+            是否是时间列
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.IsContextIdentityColumn">
+            <summary>
+            是否是跨库的上下文列
+            </summary>
+        </member>
+        <member name="P:Adhesive.Mongodb.MongodbPersistenceItemAttribute.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbIndexOption.None">
+            <summary>
+            不作索引
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbIndexOption.Ascending">
+            <summary>
+            递增索引
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbIndexOption.Descending">
+            <summary>
+            递减索引
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbIndexOption.AscendingAndUnique">
+            <summary>
+            唯一的递增索引
+            </summary>
+        </member>
+        <member name="F:Adhesive.Mongodb.MongodbIndexOption.DescendingAndUnique">
+            <summary>
+            唯一的递减索引
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1908 @@
+﻿[Info] @15:24:46_5811 #8 - AdhesiveFramework开始启动...版本号：2012-06-01-08
+[Debug] @15:24:46_7122 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.Config.Imp.RegisterServiceTask' ()
+[Debug] @15:24:46_7132 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.Mongodb.Imp.RegisterServiceTask' ()
+[Debug] @15:24:46_7232 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.AppInfoCenter.Imp.RegisterServiceTask' (注册日志、异常、性能、状态服务)
+[Debug] @15:24:46_7242 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.MemoryQueue.Imp.RegisterServiceTask' ()
+[Debug] @15:24:46_7252 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.Config.Imp.InitServiceTask' ()
+[Info] @15:24:46_7312 #8 - 开始初始化配置服务
+[Error] @15:24:47_8280 #8 - 初始化配置服务失败，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0018129. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+   at Adhesive.Config.Imp.ConfigService.RegisterApplication(String appName) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 793
+   at Adhesive.Config.Imp.ConfigService.Init() in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 42
+   at Adhesive.Config.Imp.InitServiceTask.Execute() in d:\src\demo1\Adhesive\Adhesive.Config.Imp\InitServiceTask.cs:line 28
+[Debug] @15:24:47_8280 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.Mongodb.Imp.InitServiceTask' (初始化Mongodb客户端服务)
+[Debug] @15:24:47_8280 #8 - AdhesiveFramework.Bootstrapper 开始执行 'Adhesive.AppInfoCenter.Imp.InitServiceTask' (挂载应用程序未处理异常、启动页面性能统计服务)
+[Debug] @15:24:47_8290 #8 - 请调用AppInfoCenterService.RegisterHealthAction()注册健康检测回调方法！
+[Info] @15:24:47_8290 #8 - AdhesiveFramework启动完成！...版本号：2012-06-01-08
+[Error] @15:24:49_9421 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013540. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:50_9544 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013564. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:51_9620 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0045859. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:52_9766 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0016417. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:53_9811 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0014268. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:54_9860 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0018697. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:56_0393 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0003544. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:57_0429 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0005623. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:57_0899 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0015576. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:58_0479 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0019721. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:58_0950 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0030658. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:59_0548 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0019792. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:24:59_1042 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0022356. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:00_0608 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0029587. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:00_1108 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0016176. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:00_1208 #7 - 异常类型：WebSiteUnhandledExceptionInfo 异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0033554. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetChildConfigItems(String appName, String[] parentPathItemNames)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetChildConfigItems(String appName, String[] parentPathItemNames)
+   at Adhesive.Config.Web.ViewAppNameList.DataBindTopLevelConfigList() in d:\src\demo1\Adhesive\Adhesive.Config.Web\ViewAppNameList.aspx.cs:line 20
+   at Adhesive.Config.Web.ViewAppNameList.Page_Load(Object sender, EventArgs e) in d:\src\demo1\Adhesive\Adhesive.Config.Web\ViewAppNameList.aspx.cs:line 13
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 
+[Error] @15:25:01_0692 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0043555. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:01_1352 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0033609. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:02_1425 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013501. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:03_2158 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0032179. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Debug] @15:25:03_2298 #7 - AdhesiveFramework.MemoryQueueService 成功初始化内存队列 'MongodbInsertService_Adhesive.AppInfoCenter.Imp.WebSiteUnhandledExceptionInfo'!
+[Error] @15:25:03_3968 #11 - Mongodb数据服务客户端模块 InternalSubmitData Adhesive.AppInfoCenter.Imp.WebSiteUnhandledExceptionInfo Invalid URI: The hostname could not be parsed.
+[Error] @15:25:04_2857 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0018705. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:05_2900 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0023494. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:06_2939 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0009167. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:07_3123 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0133599. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:08_3218 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0064879. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:09_3328 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0079823. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:10_8763 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013565. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:11_6550 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0017097. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:11_8820 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0007092. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:12_6606 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0026872. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:12_8863 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0022613. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:13_6683 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0036818. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:13_8908 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0014912. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:14_6752 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0018986. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:14_6762 #14 - 异常类型：WebSiteUnhandledExceptionInfo 异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013667. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetChildConfigItems(String appName, String[] parentPathItemNames)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetChildConfigItems(String appName, String[] parentPathItemNames)
+   at Adhesive.Config.Web.ViewAppNameList.DataBindTopLevelConfigList() in d:\src\demo1\Adhesive\Adhesive.Config.Web\ViewAppNameList.aspx.cs:line 20
+   at Adhesive.Config.Web.ViewAppNameList.Page_Load(Object sender, EventArgs e) in d:\src\demo1\Adhesive\Adhesive.Config.Web\ViewAppNameList.aspx.cs:line 13
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) 
+[Error] @15:25:14_8948 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0019717. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:15_6810 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0007409. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:15_8990 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0012845. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:16_6849 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0009668. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:16_9054 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0023233. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:17_6995 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0005338. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:17_7065 #6 - Mongodb数据服务客户端模块 InternalSubmitData Adhesive.AppInfoCenter.Imp.WebSiteUnhandledExceptionInfo Invalid URI: The hostname could not be parsed.
+[Error] @15:25:17_9395 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0021842. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:18_7067 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0021870. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:18_9437 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0011870. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:19_7131 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0024569. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:19_9492 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0014505. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:20_7275 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0113638. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:20_9628 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0106529. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:21_7382 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0067455. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:21_9674 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0005232. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:22_7418 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0015793. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:22_9781 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0067740. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:23_7474 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0006191. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:23_9825 #15 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013513. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:25_1189 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013560. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:25_1399 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0003591. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:26_1263 #14 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013431. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225
+[Error] @15:25:26_1463 #7 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: Could not connect to net.tcp://127.0.0.1:18989/ConfigService. The connection attempt lasted for a time span of 00:00:01.0013529. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:18989.  ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:18989
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 183
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String appName, String[] pathItemNames) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 176
+   at Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) in d:\src\demo1\Adhesive\Adhesive.Config.Imp\ConfigService.cs:line 225

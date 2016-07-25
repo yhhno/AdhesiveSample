@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.Persistence</name>
+    </assembly>
+    <members>
+        <member name="T:Adhesive.Persistence.IIdentityGenerator">
+            <summary>
+            唯一标识生成器接口
+            </summary>
+        </member>
+        <member name="T:Adhesive.Persistence.IQueryableExtensions">
+            <summary>
+            Helper extensions for add IDbSet methods defined only
+            for DbSet and ObjectQuery
+            </summary>
+        </member>
+        <member name="M:Adhesive.Persistence.IQueryableExtensions.Include``2(System.Data.Entity.IDbSet{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Include extension method for IDbSet
+            <example>
+            var query = ReturnTheQuery();
+            query = query.Include(customer=>customer.Orders);//"Orders"
+            //or
+            query = query.Include(customer=>customer.Orders.Select(o=>o.OrderDetails) //"Orders.OrderDetails"
+            </example>
+            </summary>
+            <typeparam name="TEntity">Type of elements in IQueryable</typeparam>
+            <typeparam name="TEntity">Type of navigated element</typeparam>
+            <param name="queryable">Queryable object</param>
+            <param name="path">Expression with path to include</param>
+            <returns>Queryable object with include path information</returns>
+        </member>
+        <member name="M:Adhesive.Persistence.IQueryableExtensions.OfType``2(System.Linq.IQueryable{``0})">
+            <summary>
+            OfType extension method for IQueryable
+            </summary>
+            <typeparam name="KEntity">The type to filter the elements of the sequence on. </typeparam>
+            <param name="queryable">The queryable object</param>
+            <returns>
+            A new IQueryable hat contains elements from
+            the input sequence of type TResult
+            </returns>
+        </member>
+        <member name="T:Adhesive.Persistence.IQueryableUnitOfWork">
+            <summary>
+            The UnitOfWork contract for EF implementation
+            <remarks>
+            This contract extend IUnitOfWork for use with EF code
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Adhesive.Persistence.ISql">
+            <summary>
+            Base contract for support 'dialect specific queries'.
+            </summary>
+        </member>
+        <member name="M:Adhesive.Persistence.ISql.ExecuteQuery``1(System.String,System.Object[])">
+            <summary>
+            Execute specific query with underliying persistence store
+            </summary>
+            <typeparam name="TEntity">Entity type to map query results</typeparam>
+            <param name="sqlQuery">
+            Dialect Query 
+            <example>
+            SELECT idCustomer,Name FROM dbo.[Customers] WHERE idCustomer > {0}
+            </example>
+            </param>
+            <param name="parameters">A vector of parameters values</param>
+            <returns>
+            Enumerable results 
+            </returns>
+        </member>
+        <member name="M:Adhesive.Persistence.ISql.ExecuteCommand(System.String,System.Object[])">
+             <summary>
+             Execute arbitrary command into underliying persistence store
+             </summary>
+             <param name="sqlCommand">
+             Command to execute
+             <example>
+             SELECT idCustomer,Name FROM dbo.[Customers] WHERE idCustomer > {0}
+             </example>
+            </param>
+             <param name="parameters">A vector of parameters values</param>
+             <returns>The number of affected records</returns>
+        </member>
+        <member name="M:Adhesive.Persistence.IQueryableUnitOfWork.CreateSet``1">
+            <summary>
+            Returns a IDbSet instance for access to entities of the given type in the context, 
+            the ObjectStateManager, and the underlying store. 
+            </summary>
+            <typeparam name="TValueObject"></typeparam>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Adhesive.Persistence.IQueryableUnitOfWork.Attach``1(``0)" -->
+        <member name="M:Adhesive.Persistence.IQueryableUnitOfWork.SetModified``1(``0)">
+            <summary>
+            Set object as modified
+            </summary>
+            <typeparam name="TValueObject">The type of entity</typeparam>
+            <param name="item">The entity item to set as modifed</param>
+        </member>
+        <member name="M:Adhesive.Persistence.IQueryableUnitOfWork.ApplyCurrentValues``1(``0,``0)">
+            <summary>
+            Apply current values in <paramref name="original"/>
+            </summary>
+            <typeparam name="TEntity">The type of entity</typeparam>
+            <param name="original">The original entity</param>
+            <param name="current">The current entity</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,224 @@
+﻿[Info] @00:37:32_9040 #4 - AdhesiveFramework开始启动...版本号：2012-06-01-08
+[Info] @00:37:33_7580 #4 - 开始初始化配置服务
+[Error] @00:37:54_8540 #4 - 初始化配置服务失败，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:20.9990000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String appName, String cateName, String itemName)
+   在 Adhesive.Config.Imp.ConfigService.RegisterApplication(String appName) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 793
+   在 Adhesive.Config.Imp.ConfigService.Init() 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 42
+   在 Adhesive.Config.Imp.InitServiceTask.Execute() 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\InitServiceTask.cs:行号 28
+[Info] @00:37:54_8560 #4 - 开始初始化持久化服务
+[Error] @00:38:16_0060 #4 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:20.9890000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 183
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 225
+[Error] @00:39:27_1020 #4 - 开始初始化持久化服务失败，异常信息：System.Data.ProviderIncompatibleException: 提供程序未返回 ProviderManifestToken 字符串。 ---> System.Data.SqlClient.SqlException: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.SqlClient.SqlProviderServices.UsingConnection(SqlConnection sqlConnection, Action`1 act)
+   在 System.Data.SqlClient.SqlProviderServices.UsingMasterConnection(SqlConnection sqlConnection, Action`1 act)
+   在 System.Data.SqlClient.SqlProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   在 System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   在 System.Data.Entity.ModelConfiguration.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   在 System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   在 System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   在 System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.LazyInternalContext.GetObjectContextWithoutDatabaseInitialization()
+   在 System.Data.Entity.Internal.LazyInternalContext.CreateObjectContextForDdlOps()
+   在 System.Data.Entity.Database.CreateIfNotExists()
+   在 Adhesive.Persistence.Imp.InitServiceTask.<Execute>b__1(Type e) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Persistence.Imp\InitServiceTask.cs:行号 26
+   在 Adhesive.Common.EnumerableExtensions.Each[T](IEnumerable`1 instance, Action`1 action) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Common\Extension\EnumerableExtensions.cs:行号 17
+   在 Adhesive.Persistence.Imp.InitServiceTask.Execute() 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Persistence.Imp\InitServiceTask.cs:行号 20
+[Warning] @00:39:27_1030 #4 - AdhesiveFramework.Bootstrapper 执行中断 'Adhesive.Persistence.Imp.InitServiceTask' ()
+[Error] @00:46:55_0340 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:20.9890000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 183
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 225
+[Error] @00:47:16_0420 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:21.0020000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 183
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 225
+[Error] @00:47:37_0490 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:21.0030000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 183
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 225
+[Error] @00:47:58_0370 #8 - 获取配置项值出错，异常信息：System.ServiceModel.EndpointNotFoundException: 无法连接到 net.tcp://192.168.129.143:18989/ConfigService。连接尝试持续了 00:00:20.9850000 时间跨度。TCP 错误代码 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989。 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.129.143:18989
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+
+Exception rethrown at [1]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Adhesive.Config.IConfigServer.GetConfigItem(String id)
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItem(String id) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 183
+   在 Adhesive.Config.Imp.ConfigService.InternalGetConfigItemValue(String appName, String[] pathItemNames, Type valType, Object defVal, ConfigItemValueUpdateCallback configItemValueUpdateCallback) 位置 C:\Users\Jacky.Hu\Desktop\Adhesive\Adhesive.Config.Imp\ConfigService.cs:行号 225

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.Config</name>
+    </assembly>
+    <members>
+        <member name="T:Adhesive.Config.ValueTypeEnum">
+            <summary>
+            配置项值类型枚举
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.Underlying">
+            <summary>
+            基础类型
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.List">
+            <summary>
+            泛型列表
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.ObjectItemList">
+            <summary>
+            特殊泛型列表，列表的item的类型为object
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.Dictionary">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.ObjectItemDictionary">
+            <summary>
+            特殊泛型字典，字典的item的类型为object
+            </summary>
+        </member>
+        <member name="F:Adhesive.Config.ValueTypeEnum.Entity">
+            <summary>
+            自定义实体
+            </summary>
+        </member>
+        <member name="T:Adhesive.Config.ConfigHelper">
+            <summary>
+            配置帮助类
+            </summary>
+        </member>
+        <member name="M:Adhesive.Config.ConfigHelper.GetConfigItemValueType(System.Type)">
+            <summary>
+            获取配置项的值的类型的字符串表达形式
+            </summary>
+            <param name="valType">配置项值类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Config.ConfigHelper.GetConfigItemValueTypeEnum(System.Type)">
+            <summary>
+            获取配置项的值的类型的枚举
+            </summary>
+            <param name="valType">配置项值类型</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

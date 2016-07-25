@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:Adhesive.Domain.Entity.OnIdChanged">
+            <summary>
+            When POID is changed
+            </summary>
+        </member>
+        <member name="M:Adhesive.Domain.Entity.IsTransient">
+            <summary>
+            Check if this entity is transient, ie, without identity at this moment
+            </summary>
+            <returns>True if entity is transient, else false</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Entity.Equals(System.Object)">
+            <summary>
+            <see cref="M:System.Object.Equals"/>
+            </summary>
+            <param name="obj"><see cref="M:System.Object.Equals"/></param>
+            <returns><see cref="M:System.Object.Equals"/></returns>
+        </member>
+        <member name="M:Adhesive.Domain.Entity.GetHashCode">
+            <summary>
+            <see cref="M:System.Object.GetHashCode"/>
+            </summary>
+            <returns><see cref="M:System.Object.GetHashCode"/></returns>
+        </member>
+        <member name="T:Adhesive.Domain.IRepository`1">
+            <summary>
+            Base interface for implement a "Repository Pattern", for
+            more information about this pattern see http://martinfowler.com/eaaCatalog/repository.html
+            or http://blogs.msdn.com/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx
+            </summary>
+            <remarks>
+            Indeed, one might think that IDbSet already a generic repository and therefore
+            would not need this item. Using this interface allows us to ensure PI principle
+            within our domain model
+            </remarks>
+            <typeparam name="TValueObject">Type of entity for this repository </typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.Add(`0)">
+            <summary>
+            Add item into repository
+            </summary>
+            <param name="item">Item to add to repository</param>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.Remove(`0)">
+            <summary>
+            Delete item 
+            </summary>
+            <param name="item">Item to delete</param>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.TrackItem(`0)">
+             <summary>
+            Track entity into this repository, really in UnitOfWork. 
+            In EF this can be done with Attach and with Update in NH
+             </summary>
+             <param name="item">Item to attach</param>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.Merge(`0,`0)">
+            <summary>
+            Sets modified entity into the repository. 
+            When calling Commit() method in UnitOfWork 
+            these changes will be saved into the storage
+            </summary>
+            <param name="persisted">The persisted item</param>
+            <param name="current">The current item</param>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.Get(System.String)">
+            <summary>
+            Get element by entity key
+            </summary>
+            <param name="entityKeyValues">entity key values, the order the are same of order in mapping.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.GetAll">
+            <summary>
+            Get all elements of type {T} in repository
+            </summary>
+            <returns>List of selected elements</returns>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.AllMatching(Adhesive.Domain.Specification.ISpecification{`0})">
+            <summary>
+            Get all elements of type {T} that matching a
+            Specification <paramref name="specification"/>
+            </summary>
+            <param name="specification">Specification that result meet</param>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.GetPaged``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Get all elements of type {T} in repository
+            </summary>
+            <param name="pageIndex">Page index</param>
+            <param name="pageCount">Number of elements in each page</param>
+            <param name="orderByExpression">Order by expression for this query</param>
+            <param name="ascending">Specify if order is ascending</param>
+            <returns>List of selected elements</returns>
+        </member>
+        <member name="M:Adhesive.Domain.IRepository`1.GetFiltered(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Get  elements of type {T} in repository
+            </summary>
+            <param name="filter">Filter that each element do match</param>
+            <returns>List of selected elements</returns>
+        </member>
+        <member name="P:Adhesive.Domain.IRepository`1.UnitOfWork">
+            <summary>
+            Get the unit of work in this repository
+            </summary>
+        </member>
+        <member name="T:Adhesive.Domain.IUnitOfWork">
+            <summary>
+            Contract for ‘UnitOfWork pattern’. For more
+            related info see http://martinfowler.com/eaaCatalog/unitOfWork.html or
+            http://msdn.microsoft.com/en-us/magazine/dd882510.aspx
+            In this solution, the Unit Of Work is implemented using the out-of-box 
+            Entity Framework Context (EF 4.1 DbContext) persistence engine. But in order to
+            comply the PI (Persistence Ignorant) principle in our Domain, we implement this interface/contract. 
+            This interface/contract should be complied by any UoW implementation to be used with this Domain.
+            </summary>
+        </member>
+        <member name="M:Adhesive.Domain.IUnitOfWork.Commit">
+             <summary>
+             Commit all changes made in a container.
+             </summary>
+            <remarks>
+             If the entity have fixed properties and any optimistic concurrency problem exists,  
+             then an exception is thrown
+            </remarks>
+        </member>
+        <member name="M:Adhesive.Domain.IUnitOfWork.CommitAndRefreshChanges">
+             <summary>
+             Commit all changes made in  a container.
+             </summary>
+            <remarks>
+             If the entity have fixed properties and any optimistic concurrency problem exists,
+             then 'client changes' are refreshed - Client wins
+            </remarks>
+        </member>
+        <member name="M:Adhesive.Domain.IUnitOfWork.RollbackChanges">
+            <summary>
+            Rollback changes are not stored in the database at 
+            this moment. See references of UnitOfWork pattern
+            </summary>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.AndSpecification`1">
+            <summary>
+            A logic AND Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.CompositeSpecification`1">
+            <summary>
+            Base class for composite specifications
+            </summary>
+            <typeparam name="TValueObject">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.Specification`1">
+            <summary>
+            Represent a Expression Specification
+            <remarks>
+            Specification overload operators for create AND,OR or NOT specifications.
+            Additionally overload AND and OR operators with the same sense of ( binary And and binary Or ).
+            C# couldn’t overload the AND and OR operators directly since the framework doesn’t allow such craziness. But
+            with overloading false and true operators this is posible. For explain this behavior please read
+            http://msdn.microsoft.com/en-us/library/aa691312(VS.71).aspx
+            </remarks>
+            </summary>
+            <typeparam name="TValueObject">Type of item in the criteria</typeparam>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.ISpecification`1">
+            <summary>
+            Base contract for Specification pattern, for more information
+            about this pattern see http://martinfowler.com/apsupp/spec.pdf
+            or http://en.wikipedia.org/wiki/Specification_pattern.
+            This is really a variant implementation where we have added Linq and
+            lambda expression into this pattern.
+            </summary>
+            <typeparam name="TValueObject">Type of entity</typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ISpecification`1.SatisfiedBy">
+            <summary>
+            Check if this specification is satisfied by a 
+            specific expression lambda
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.SatisfiedBy">
+            <summary>
+            IsSatisFied Specification pattern method,
+            </summary>
+            <returns>Expression that satisfy this specification</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.op_BitwiseAnd(Adhesive.Domain.Specification.Specification{`0},Adhesive.Domain.Specification.Specification{`0})">
+            <summary>
+             And operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this AND operation</param>
+            <param name="rightSideSpecification">right operand in this AND operation</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.op_BitwiseOr(Adhesive.Domain.Specification.Specification{`0},Adhesive.Domain.Specification.Specification{`0})">
+            <summary>
+            Or operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this OR operation</param>
+            <param name="rightSideSpecification">left operand in this OR operation</param>
+            <returns>New specification </returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.op_LogicalNot(Adhesive.Domain.Specification.Specification{`0})">
+            <summary>
+            Not specification
+            </summary>
+            <param name="specification">Specification to negate</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.op_False(Adhesive.Domain.Specification.Specification{`0})">
+            <summary>
+            Override operator false, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See False operator in C#</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.Specification`1.op_True(Adhesive.Domain.Specification.Specification{`0})">
+            <summary>
+            Override operator True, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See True operator in C#</returns>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.CompositeSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification for this composite element
+            </summary>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.CompositeSpecification`1.RightSideSpecification">
+            <summary>
+            Right side specification for this composite element
+            </summary>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.AndSpecification`1.#ctor(Adhesive.Domain.Specification.ISpecification{`0},Adhesive.Domain.Specification.ISpecification{`0})">
+            <summary>
+            Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.AndSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:Adhesive.Domain.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:Adhesive.Domain.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.AndSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification
+            </summary>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.AndSpecification`1.RightSideSpecification">
+            <summary>
+            Right side specification
+            </summary>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.DirectSpecification`1">
+            <summary>
+            A Direct Specification is a simple implementation
+            of specification that acquire this from a lambda expression
+            in  constructor
+            </summary>
+            <typeparam name="TValueObject">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.DirectSpecification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Default constructor for Direct Specification
+            </summary>
+            <param name="matchingCriteria">A Matching Criteria</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.DirectSpecification`1.SatisfiedBy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.ExpressionBuilder">
+            <summary>
+            Extension methods for adding AND and OR with parameters rebinder
+            </summary>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ExpressionBuilder.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            Compose two expressions and merge all in a new expression
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Expression instance</param>
+            <param name="second">Expression to merge</param>
+            <param name="merge">Function to merge</param>
+            <returns>New merged expression</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ExpressionBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            And operator
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Right Expression in AND operation</param>
+            <param name="second">Left Expression in And operation</param>
+            <returns>New AND expression</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ExpressionBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Or operator
+            </summary>
+            <typeparam name="T">Type of param in expression</typeparam>
+            <param name="first">Right expression in OR operation</param>
+            <param name="second">Left expression in OR operation</param>
+            <returns>New Or expressions</returns>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.NotSpecification`1">
+            <summary>
+            NotEspecification convert a original
+            specification with NOT logic operator
+            </summary>
+            <typeparam name="TValueObject">Type of element for this specificaiton</typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.NotSpecification`1.#ctor(Adhesive.Domain.Specification.ISpecification{`0})">
+            <summary>
+            Constructor for NotSpecificaiton
+            </summary>
+            <param name="originalSpecification">Original specification</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.NotSpecification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constructor for NotSpecification
+            </summary>
+            <param name="originalSpecification">Original specificaiton</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.NotSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:Adhesive.Domain.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:Adhesive.Domain.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.OrSpecification`1">
+            <summary>
+            A Logic OR Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.OrSpecification`1.#ctor(Adhesive.Domain.Specification.ISpecification{`0},Adhesive.Domain.Specification.ISpecification{`0})">
+            <summary>
+            Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.OrSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:Adhesive.Domain.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:Adhesive.Domain.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.OrSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification
+            </summary>
+        </member>
+        <member name="P:Adhesive.Domain.Specification.OrSpecification`1.RightSideSpecification">
+            <summary>
+            Righ side specification
+            </summary>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.ParameterRebinder">
+            <summary>
+            Helper for rebinder parameters without use Invoke method in expressions 
+            ( this methods is not supported in all linq query providers, 
+            for example in Linq2Entities is not supported)
+            </summary>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            Default construcotr
+            </summary>
+            <param name="map">Map specification</param>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            Replate parameters in expression with a Map information
+            </summary>
+            <param name="map">Map information</param>
+            <param name="exp">Expression to replace parameters</param>
+            <returns>Expression with parameters replaced</returns>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit pattern method
+            </summary>
+            <param name="p">A Parameter expression</param>
+            <returns>New visited expression</returns>
+        </member>
+        <member name="T:Adhesive.Domain.Specification.TrueSpecification`1">
+            <summary>
+            True specification
+            </summary>
+            <typeparam name="TValueObject">Type of entity in this specification</typeparam>
+        </member>
+        <member name="M:Adhesive.Domain.Specification.TrueSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:Adhesive.Domain.Specification.Specification`1"/>
+            </summary>
+            <returns><see cref="T:Adhesive.Domain.Specification.Specification`1"/></returns>
+        </member>
+    </members>
+</doc>

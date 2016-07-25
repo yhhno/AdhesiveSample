@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.DistributedService</name>
+    </assembly>
+    <members>
+        <member name="M:Adhesive.DistributedService.IWcfServiceLocator.GetService``1">
+            <summary>
+            调用出错会抛异常
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Adhesive.DistributedService.IWcfServiceLocator.GetSafeService``1">
+            <summary>
+            调用出错不会抛异常
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

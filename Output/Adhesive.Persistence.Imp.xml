@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Adhesive.Persistence.Imp</name>
+    </assembly>
+    <members>
+        <member name="M:Adhesive.Persistence.Imp.CryptoUtil.Encrypt(System.String)">
+            <summary>          
+            对字符串进行DES加密          
+            </summary>          
+            <param name="sourceString">待加密的字符串</param>          
+            <returns>加密后的BASE64编码的字符串</returns>          
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.CryptoUtil.Decrypt(System.String)">
+            <summary>          
+            对DES加密后的字符串进行解密          
+            </summary>          
+            <param name="encryptedString">待解密的字符串</param>          
+            <returns>解密后的字符串</returns>          
+        </member>
+        <member name="P:Adhesive.Persistence.Imp.CryptoUtil.IV">
+            <summary>          
+            DES加密偏移量，必须是>=8位长的字符串          
+            </summary>          
+        </member>
+        <member name="P:Adhesive.Persistence.Imp.CryptoUtil.Key">
+            <summary>          
+            DES加密的私钥，必须是8位长的字符串          
+            </summary>          
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.IdentityGenerator.NewSequentialGuid">
+            <summary>
+            This algorithm generates secuential GUIDs across system boundaries, ideal for databases 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Adhesive.Persistence.Imp.SequentialGuidGenerator">
+            <summary>
+            GUID生成器，产生字符串表示的连续的GUID。
+            </summary>
+        </member>
+        <member name="T:Adhesive.Persistence.Imp.Repository`1">
+            <summary>
+            Repository base class
+            </summary>
+            <typeparam name="TEntity">The type of underlying entity in this repository</typeparam>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.#ctor(Adhesive.Persistence.IQueryableUnitOfWork)">
+            <summary>
+            Create a new instance of repository
+            </summary>
+            <param name="unitOfWork">Associated Unit Of Work</param>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.Add(`0)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="item"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.Remove(`0)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="item"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.TrackItem(`0)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="item"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.Modify(`0)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="item"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.Get(System.String)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="id"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <returns><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></returns>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.GetAll">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <returns><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></returns>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.AllMatching(Adhesive.Domain.Specification.ISpecification{`0})">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="specification"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <returns><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></returns>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.GetPaged``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <typeparam name="S"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></typeparam>
+            <param name="pageIndex"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <param name="pageCount"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <param name="orderByExpression"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <param name="ascending"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <returns><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></returns>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.GetFiltered(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="filter"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <returns><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></returns>
+        </member>
+        <member name="M:Adhesive.Persistence.Imp.Repository`1.Merge(`0,`0)">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+            <param name="persisted"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+            <param name="current"><see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/></param>
+        </member>
+        <member name="P:Adhesive.Persistence.Imp.Repository`1.UnitOfWork">
+            <summary>
+            <see cref="!:Microsoft.Samples.NLayerApp.Domain.Seedwork.IRepository&lt;TValueObject&gt;"/>
+            </summary>
+        </member>
+    </members>
+</doc>
